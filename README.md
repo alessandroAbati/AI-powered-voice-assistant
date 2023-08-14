@@ -35,6 +35,8 @@ To use this voice assistant, you need to fulfill the following requirements:
    conda activate voice-assistant-env
 
 3. Replace [paste your OpenAI API key here] in main.py with your actual OpenAI API key.
+   Alternatively, one can use a config.yml file that will be ignored by git while pushing.
+   
 4. Run the voice assistant:
    ```bash
    python main.py
