@@ -65,3 +65,15 @@ To use this voice assistant, you need to fulfill the following requirements:
 5. Run the voice assistant:
    ```bash
    python main.py
+
+### Usage
+
+1. Start the voice assistant by running main.py.
+
+2. Use the wake word ("ok bing" or "ok chat") to start the assistant based on the AI you want to use.
+   
+3. Speak your prompt.
+
+4. The voice assistant will respond based on the prompt using either GPT-3 or Bing AI.
+
+5. Enjoy the interactions with your AI-powered voice assistant!
