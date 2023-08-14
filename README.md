@@ -4,13 +4,11 @@ This repository contains code for an AI-powered voice assistant that can interac
 
 ## Features
 
-- **Wake Words**: The voice assistant responds to the wake words "ok bing" or "ok chat."
+- **Wake Words**: The voice assistant responds to the wake words "ok bing" or "ok chat.", the former will send the prompt to Bing AI, while the latter will send it to Chat GPT 3.5
 
-- **Chat Interaction**: With the wake word recognized, users can engage in a conversation with the voice assistant. It uses GPT-3 to provide context-aware responses.
+- **Chat Interaction**: With the wake word recognized, users can engage in a conversation with the voice assistant.
 
-- **Precise Response**: For certain scenarios, the voice assistant utilizes a precise conversation style when interacting with the user.
-
-- **Speech Synthesis**: Responses from the voice assistant are synthesized using Amazon Polly, providing a natural and human-like voice.
+- **Speech Synthesis**: Responses from the voice assistant are synthesized using Amazon Polly, providing a natural and human-like voice (which can be customized on the AWS webiste).
 
 ## Requirements
 
@@ -80,18 +78,22 @@ This voice assistant uses AI technologies and requires proper API keys. It's ess
 ## Next Steps/ Future Improvements
 Here are some potential areas for enhancement and development:
 
-- **Customization**: Allow users to customize the wake words, conversation style, or add new capabilities to the voice assistant.
+- **Additional AI**: Integrate other AI like BARD for more choice.
 
-Additional APIs: Integrate other APIs for more functionalities, such as weather information, news updates, or language translation.
+- **Handle long conversation**: Implement features to handle long conversation with the AI using more than one prompt.
 
-Error Handling: Implement robust error handling to gracefully handle API errors or unexpected user input.
+- **Additional APIs**: Integrate other APIs for more functionalities, such as weather information, news updates, or language translation.
 
-Optimization: Optimize the code for efficiency and performance, especially when interacting with external APIs.
+- **Automatically select AI**: Automatically select the best AI for the submitted prompt.
 
-User Interface: Create a graphical user interface (GUI) to make the voice assistant more user-friendly.
+- **Error Handling**: Implement robust error handling to gracefully handle API errors or unexpected user input.
 
-Continuous Learning: Explore methods to make the voice assistant learn from user interactions and improve over time.
+- **Optimization**: Optimize the code for efficiency and performance, especially when interacting with external APIs.
 
-Community Contributions: Encourage others to contribute to the project by adding new features, fixing bugs, or improving documentation.
+- **Continuous Learning**: Explore methods to make the voice assistant learn from user interactions and improve over time.
+
+- **Community Contributions**: Encourage others to contribute to the project by adding new features, fixing bugs, or improving documentation.
+
+- **User Interface**: Create a graphical user interface (GUI) to make the voice assistant more user-friendly.
 
 Feel free to contribute to this project by addressing any of the above points or by suggesting your own ideas!
