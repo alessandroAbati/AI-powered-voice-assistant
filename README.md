@@ -25,6 +25,7 @@ Clone the repository:
 Copy code
 git clone https://github.com/alessandroAbati/AI-powered-voice-assistant.git
 cd AI-powered-voice-assistant
+'''
 Set up a virtual environment with Conda using the provided environment.yml file:
 
 '''bash
@@ -32,7 +33,7 @@ Copy code
 conda env create -f environment.yml
 conda activate voice-assistant-env
 Replace [paste your OpenAI API key here] in main.py with your actual OpenAI API key.
-
+'''
 Run the voice assistant:
 
 bash
