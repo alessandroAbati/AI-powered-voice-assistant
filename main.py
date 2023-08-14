@@ -135,7 +135,7 @@ class VoiceAssistant:
         with sr.Microphone(sample_rate=16000) as source:
             try:
                 self.recognizer.adjust_for_ambient_noise(source)
-                audio = self.recognizer.listen(source, timeout=10)  # Set a timeout for listening
+                audio = self.recognizer.listen(source, timeout=30)  # Set a timeout for listening
                 audio = audio.get_wav_data()
                 audio_data = (np.frombuffer(audio, dtype=np.int16).astype(np.float32)) / (2 ** 15)
 
