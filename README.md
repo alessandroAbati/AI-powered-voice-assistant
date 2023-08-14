@@ -21,13 +21,13 @@ Getting Started
 Using Conda (Recommended)
 Clone the repository:
 
-bash
+'''bash
 Copy code
 git clone https://github.com/alessandroAbati/AI-powered-voice-assistant.git
 cd AI-powered-voice-assistant
 Set up a virtual environment with Conda using the provided environment.yml file:
 
-bash
+'''bash
 Copy code
 conda env create -f environment.yml
 conda activate voice-assistant-env
