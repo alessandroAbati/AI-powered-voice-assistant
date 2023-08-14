@@ -27,5 +27,41 @@ To use this voice assistant, you need to fulfill the following requirements:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/[your-username]/AI-powered-voice-assistant.git
+   git clone https://github.com/alessandroAbati/AI-powered-voice-assistant.git
    cd AI-powered-voice-assistant
+
+2. Set up virtual environment with Conda using the provided environment.yml file:
+
+   ```bash
+   conda env create -f environment.yml
+   conda activate voice-assistant-env
+
+3. Replace [paste your OpenAI API key here] in main.py with your actual OpenAI API key.
+4. Run the voice assistant:
+   ```bash
+   python main.py
+
+### Using Pip
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/alessandroAbati/AI-powered-voice-assistant.git
+   cd AI-powered-voice-assistant
+
+2. Set up a virtual environment (optional but recommended)::
+
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows, use: .\venv\Scripts\activate
+
+3. Install the required packages using pip:
+   
+   ```bash
+   pip install -r requirements.txt
+
+4. Replace [paste your OpenAI API key here] in main.py with your actual OpenAI API key.
+   
+5. Run the voice assistant:
+   ```bash
+   python main.py
