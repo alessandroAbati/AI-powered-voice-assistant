@@ -80,7 +80,7 @@ This voice assistant uses AI technologies and requires proper API keys. It's ess
 ## Next Steps/ Future Improvements
 Here are some potential areas for enhancement and development:
 
-Customization: Allow users to customize the wake words, conversation style, or add new capabilities to the voice assistant.
+- **Customization**: Allow users to customize the wake words, conversation style, or add new capabilities to the voice assistant.
 
 Additional APIs: Integrate other APIs for more functionalities, such as weather information, news updates, or language translation.
 
