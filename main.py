@@ -108,7 +108,7 @@ class VoiceAssistant:
         self.synthesizer = PollySynthesizer()
 
     def listen_for_wake_word(self):
-        print("\nWaiting for wake words 'ok bing' or 'ok chat'...")
+        print("\nWaiting for wake words 'ok bing' or 'ok GPT'...")
 
         while True:
             with sr.Microphone(sample_rate=16000) as source:
@@ -134,7 +134,7 @@ class VoiceAssistant:
 
         with sr.Microphone(sample_rate=16000) as source:
             try:
-                self.recognizer.adjust_for_ambient_noise(source)
+                self.recognizer.adjust_for_ambient_noise(source, duration=1)
                 audio = self.recognizer.listen(source, timeout=30)  # Set a timeout for listening
                 audio = audio.get_wav_data()
                 audio_data = (np.frombuffer(audio, dtype=np.int16).astype(np.float32)) / (2 ** 15)
@@ -161,7 +161,7 @@ class VoiceAssistant:
         await bot.close()
         return bot_response
 
-    def handle_gpt_assistant(self, user_input):
+    async def handle_gpt_assistant(self, user_input):
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=[
@@ -191,8 +191,8 @@ class VoiceAssistant:
 
             if wake_word == BING_WAKE_WORD:
                 bot_response = await self.handle_bing_assistant(user_input)
-            else:
-                bot_response = self.handle_gpt_assistant(user_input)
+            elif wake_word == GPT_WAKE_WORD:
+                bot_response = await self.handle_gpt_assistant(user_input)
 
             print("Bot's response:", bot_response)
             synthesize_bot_response_data = self.synthesizer.synthesize_speech(bot_response)
