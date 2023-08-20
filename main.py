@@ -112,7 +112,7 @@ class VoiceAssistant:
 
         while True:
             with sr.Microphone(sample_rate=16000) as source:
-                self.recognizer.adjust_for_ambient_noise(source)
+                self.recognizer.adjust_for_ambient_noise(source, duration=1)
                 audio = self.recognizer.listen(source, timeout=10)  # Set a timeout for listening
                 audio = audio.get_wav_data()
                 audio_data = (np.frombuffer(audio, dtype=np.int16).astype(np.float32)) / (2 ** 15)
@@ -154,7 +154,7 @@ class VoiceAssistant:
         response = await bot.ask(prompt=user_input, conversation_style=ConversationStyle.precise)
         # Select only the bot response from the response dictionary
         for message in response["item"]["messages"]:
-            if message["author"] == "bot":
+            if message["author"] == "bot" and '😊' in message['text']: # Makes sure that we get the AI correct answer from the response
                 bot_response = message["text"]
         # Remove [^#^] citations in response
         bot_response = re.sub(r'\[\^\d+\^\]', '', bot_response)
@@ -202,5 +202,3 @@ class VoiceAssistant:
 if __name__ == "__main__":
     voice_assistant = VoiceAssistant()
     asyncio.run(voice_assistant.run())
-
-
